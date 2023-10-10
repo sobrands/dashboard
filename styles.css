@@ -140,5 +140,74 @@ body {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
 
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 1rem;
+
   background-color: #e4e4e7;
+  padding: 55px 30px;
+}
+
+.content .projects {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem 1.5rem;
+}
+
+.content .projects h2 {
+  grid-column: 1 / -1;
+  margin-bottom: -1.2rem;
+}
+
+.content .projects .project {
+  display: grid;
+  grid-template-columns: 1rem 1fr;
+  grid-template-rows: 1fr auto;
+
+  background-color: white;
+  border-radius: 15px;
+}
+
+.content .projects .project .color-block {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+
+  background-color: yellow;
+  border-radius: 12px 0 0 12px;
+}
+
+.content .projects .project .text-block {
+  padding: 3.5rem 1.3rem;
+}
+
+.content .announce-and-trends {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 3rem;
+}
+
+.content .announce-and-trends .announcements,
+.content .announce-and-trends .trends {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 0.75rem;
+}
+
+.content .announce-and-trends .border{
+  width: 100%;
+  height: 1px;
+  background-color: lightgray;
+}
+
+.content .announce-and-trends .banner {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
